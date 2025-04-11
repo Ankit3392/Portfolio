@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container dis-flex" id="navbar">
+      <div class="logo">
+        <h2>mr <span class="primary_color">ankit</span></h2>
+      </div>
+      <div class="nav dis-flex">
+        <a href="" class="nav_menu primary_color">home</a>
+        <a href="#about_section" class="nav_menu">about</a>
+        <a href="#service_section" class="nav_menu">Services</a>
+        <a href="" class="nav_menu">Skills</a>
+        <a href="" class="nav_menu">projects
+        </a>
+        <a href="" class="nav_menu">Contact</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="container profile_section two_column">
+      <div class="profile_info dis-flex">
+        <p class="sub_heading primary_color">hello and welcome</p>
+        <h1>i am <span class="primary_color">ankit</span>,and I specialize in<span class="primary_color"> web
+            development</span> and <span class="primary_color">Java</span> programming.</h1>
+        <p>This website is dedicated to showcasing my technical journey, knowledge, projects, and source code. Here,
+          you’ll find insights into my learning experiences and the projects I've worked on, along with their source
+          code. I aim to share my growth as a developer and inspire others in their own journeys. </p>
+        <button class="primary_button"><a href="">see my works</a></button>
+      </div>
+      <div class="profile_picture" style="text-align: center;">
+        <img src="./IMAGE/OIP.jpeg" alt="">
+      </div>
+    </section>
+    <section class="media_section container two_column">
+      <p>keep scrolling</p>
+      <div class="media_section--media dis-flex">
+        <a href="">facebook</a>
+        <a href="">instagram</a>
+        <a href="">linkedin</a>
+        <a href="">twitter</a>
+      </div>
+    </section>
+    <section class="about_section">
+      <div class="container">
+        <p class="sub_heading primary_color">about me</p>
+        <div>
+          <h2 class="about_me-heading" id="about_section">
+            I am Ankit, a web and Java developer specializing in web development and Java programming. I have expertise
+            in databases, including SQL and MongoDB, and I am proficient in using frameworks like Spring Boot.
+          </h2>
+          <p style="display: block;margin-top: 2rem;">Follow me on : linkedin, instagram, facebook ;</p>
+        </div>
+        <div class="with_two-section">
+          <img style="border-radius: 30%;position: relative;" src="./IMAGE/OIP.jpeg" alt="">
+        </div>
+      </div>
+
+    </section>
+
+    <section class="service_section" id="service_section">
+      <div class="container service_section--services">
+        <div class="two_column">
+          <div class="service_section--summary">
+            <p class="sub_heading primary_color">services</p>
+            <h2 class="second_heading">what i do</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis deserunt error assumenda tenetur,
+              beatae sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, mollitia.</p>
+          </div>
+          <div class="service_section--list">
+            <ul>
+              <li>web development</li>
+              <!-- <li>ul/ux design</li>
+                <li>data analytics</li> -->
+            </ul>
+          </div>
+        </div>
+        <div id="language">
+          <span class="lang primary_color">html</span>
+          <span class="lang primary_color">css</span>
+          <span class="lang primary_color">javascript</span>
+          <span class="lang primary_color">Java</span>
+          <!-- <span class="lang primary_color">springBoot</span> -->
+        </div>
+      </div>
+    </section>
+    <section class="container services_counter dis-flex">
+      <p class="sub_heading primary_color">services counter</p>
+      <h2 class="second_heading">
+        I have a 0 years of work experience but done lots of projects, and designing works.
+      </h2>
+      <div class="services_counter--counting dis-flex">
+        <h3>projects</h3>
+        <h3>Clients</h3>
+      </div>
+    </section>
+    <!-- <section class="container"></section> -->
+
+    <section style="position: relative;">
+      <section class="contact-section">
+        <div class="container dis-grid two_column contact-section-container">
+          <div class="contact_detail">
+            <img id="contact-decoration" src="./IMAGE/contact-decoration.svg" alt="df">
+            <p class="sub_heading primary_color">contact us</p>
+            <h2 class="second_heading">
+              Have a Project or want to Collaborate?
+            </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dicta?</p>
+            <div style="margin:2rem 0 0 0;" class="contact-section_address">
+              <div>
+                <p class="title">Location</p>
+                <p class="description">Pune, Maharashtra</p>
+              </div>
+              <div>
+                <p class="title">Mail at</p>
+                <p class="description">vinodthapavlog@gmail.com</p>
+              </div>
+              <div>
+                <p class="title">Follow on</p>
+                <p class="description social-links"><a href="/#">Facebook</a><span>-</span><a target="_blank"
+                    href="https://www.instagram.com/thapatechnical/">Instagram</a><span>-</span><a target="_blank"
+                    href="https://discord.gg/MdScmCsua6">Discord</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+  
+            <form action="">
+              <h2 class="form-title">Send a message</h2>
+              <div>
+                <label for="name">your name</label>
+                <input type="text" placeholder="abc kumar">
+              </div>
+              <div>
+                <label for="mail">your Email</label>
+                <input type="email" name="mail" id="" placeholder="email@address.com">
+              </div>
+              <div>
+                <label for="subject">Subject</label>
+                <input type="text" name="" id="" placeholder="">
+              </div>
+              <div>
+                <label for="description">description</label>
+                <textarea name="description" id="" placeholder="Type your message"></textarea>
+              </div>
+              <div>
+                <!-- <img src="IMAGE/arrow.svg" alt=""> -->
+                <button class="dark-green-btn">Send message <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17.7581 11.3045C17.3828 10.9292 17.3828 10.3208 17.7581 9.94551C18.1333 9.57025 18.7417 9.57025 19.1169 9.94551L24.2419 15.0705C24.6172 15.4458 24.6172 16.0542 24.2419 16.4294L19.1169 21.5544C18.7417 21.9297 18.1333 21.9297 17.7581 21.5544C17.3828 21.1792 17.3828 20.5708 17.7581 20.1956L21.2425 16.7109H8.82812C8.29742 16.7109 7.86719 16.2807 7.86719 15.75C7.86719 15.2193 8.29742 14.7891 8.82812 14.7891H21.2425L17.7581 11.3045Z"
+                      fill="white"></path>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </main>
+  <footer>
+    <section class="footer_border"></section>
+    <section class="container dis-flex">
+      <div class="footer_menu dis-flex ">
+        <h3><span class="primary_color">mr.ankit</span> kumar</h3>
+        <div class="dis-flex footer_menu--list">
+          <a href="">home</a>
+          <a href="">about</a>
+          <a href="">Services</a>
+          <a href="">Skills</a>
+          <a href="">projects
+          </a>
+          <a href="">Contact</a>
+        </div>
+      </div>
+
+      <div class="copy_right dis-flex footer_menu">
+        <p class="copy_sign">&COPY; copyright 2024, All rights reserved!</p>
+        <!-- <div class=" dis-flex footer_menu--list">
+          <a href="">home</a>
+          <a href="">about</a>
+          <a href="">Services</a>
+          <a href="">Skills</a>
+        </div> -->
+    </section>
+  </footer>
+  <script>
+
+
+  </script>
+</body>
+
+</html>
