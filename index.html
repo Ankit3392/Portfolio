@@ -9,8 +9,19 @@
 </head>
 
 <body>
+  
   <header>
+    <div class="nav-page">
+      <a href="" class="nav_menu primary_color">home</a>
+      <a href="#about_section" class="nav_menu">about</a>
+      <a href="#service_section" class="nav_menu">Services</a>
+      <a href="" class="nav_menu">Skills</a>
+      <a href="" class="nav_menu">projects
+      </a>
+      <a href="" class="nav_menu">Contact</a>
+    </div>
     <div class="container dis-flex" id="navbar">
+     
       <div class="logo">
         <h2>mr <span class="primary_color">ankit</span></h2>
       </div>
@@ -22,6 +33,13 @@
         <a href="" class="nav_menu">projects
         </a>
         <a href="" class="nav_menu">Contact</a>
+      </div>
+      <div class="nav-btn-menu">
+        <button  id="nav-btn" aria-label="Toggle Navbar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
@@ -126,13 +144,12 @@
               <div>
                 <p class="title">Follow on</p>
                 <p class="description social-links"><a href="/#">Facebook</a><span>-</span><a target="_blank"
-                    href="#">Instagram</a><span>-</span><a target="_blank"
-                    href="#">Linkedin</a></p>
+                    href="#">Instagram</a><span>-</span><a target="_blank" href="#">Linkedin</a></p>
               </div>
             </div>
           </div>
           <div class="contact-form">
-  
+
             <form action="">
               <h2 class="form-title">Send a message</h2>
               <div>
@@ -195,8 +212,20 @@
     </section>
   </footer>
   <script>
-
-
+    const nav_page=document.querySelector(".nav-page");
+    const nav_btn=document.querySelector("#nav-btn")
+    nav_btn.addEventListener("click",()=>{
+      if(nav_btn.classList.contains("nav-btn-active")){
+        nav_btn.classList.remove("nav-btn-active");
+        nav_page.style.width="0%";
+        document.body.classList.remove("no-scroll");
+      }else{
+        console.log("df");
+        nav_btn.classList.add("nav-btn-active");
+        document.body.classList.add("no-scroll");
+        nav_page.style.width="100%";
+      }
+    });
   </script>
 </body>
 

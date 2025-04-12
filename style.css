@@ -35,7 +35,9 @@ body{
     font-family: "Jost", sans-serif;
     background-color: rgb(43, 43, 43);
     /* position: relative; */
+    /* position: relative; */
 }
+
 ::-webkit-scrollbar{
     width: 0.32rem;
 }
@@ -95,6 +97,7 @@ body{
     cursor:pointer;
     font-size:1.335rem;
     color: white;
+    /* align-self: center; */
     padding: 0.62rem 2.2rem;
     background-color: rgb(111, 61, 46);
     -webkit-border-radius:0.6rem;
@@ -156,6 +159,7 @@ header .container{
     margin-top: 2.875rem;
     margin-bottom: 1.5rem;
     font-size: 1.12rem;
+    z-index: 2;
     color: white;
     justify-content: space-between;
 }
@@ -204,6 +208,56 @@ header .container{
 }
 header .container a{
     color: white;
+}
+#nav-btn{
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    background: none;
+    border: 0px;
+    flex-direction: column;
+    padding: 0.25rem;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+#nav-btn span {
+    background: white;
+    /* display: inline-block; */
+    padding: 0.05rem 0.85rem;
+    transition: 0.2s;
+    transform-origin: left center;
+}
+/* .nav-btn-active  */
+.no-scroll{
+    overflow: hidden;
+}
+/* .nav-btn-active{
+    overflow: hidden;
+} */
+.nav-btn-active  span:first-child{
+  transform: rotate(45deg);
+}
+.nav-btn-active  span:last-child{
+    transform: rotate(-45deg);
+}
+.nav-btn-active  span:nth-child(2){
+    opacity: 0;
+}
+.nav-page{
+    width: 0px;
+    height: 100vh;
+    background: rgb(35, 35, 35);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    gap: 0.8rem;
 }
 .profile_section{
     /* flex-basis: 2; */
@@ -659,5 +713,8 @@ footer .container{
         & .contact-section_address{
             width: 100%;
         }
+    }
+    .primary_button{
+        align-self: center;
     }
 }
