@@ -34,6 +34,7 @@ body{
     /* font-size:1.15rem; */
     font-family: "Jost", sans-serif;
     background-color: rgb(43, 43, 43);
+    padding-top: 7.5rem;
     /* position: relative; */
     /* position: relative; */
 }
@@ -87,6 +88,9 @@ body{
     /* max-width: clamp(16rem, 95vw, 85rem); */
     max-width: 1122px;
 }
+.no-drop{
+    cursor: no-drop;
+}
 .primary_button{
     display: flex;
     justify-content: center;
@@ -94,7 +98,7 @@ body{
     outline: none;
     border: none;
     border-radius:0.6rem;
-    cursor:pointer;
+    cursor:no-drop;
     font-size:1.335rem;
     color: white;
     /* align-self: center; */
@@ -107,6 +111,7 @@ body{
 
     & a{
         color: white;
+        cursor: inherit;
     }
 }
 .primary_button:hover{
@@ -138,9 +143,13 @@ a{
     text-transform: capitalize;
     cursor: pointer;
 }
-header{
+/* header{
     background-color: rgb(43, 43, 43);
-}
+    position: relative;
+    position: fixed;
+    top: 0px;
+    left: 0;
+} */
 .logo{
     text-align: center;
     font-family:'Segoe UI';
@@ -154,7 +163,7 @@ header{
         color:var(--primary_color) ;
     }
 }
-header .container{
+/* header .container{
     padding: 0 10px;
     margin-top: 2.875rem;
     margin-bottom: 1.5rem;
@@ -162,7 +171,29 @@ header .container{
     z-index: 2;
     color: white;
     justify-content: space-between;
-}
+   
+} */
+header {
+    background-color: rgb(43, 43, 43);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 1000;
+  }
+  
+  header .container {
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 20px !important;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    /* border: 2px solid yellow; */
+  }
+  
 .nav{
     transition:0.2s;
     gap:4.2rem;
@@ -210,8 +241,8 @@ header .container a{
     color: white;
 }
 #nav-btn{
-    /* display: none; */
-    display: flex;
+    display: none;
+    /* display: flex; */
     flex-direction: column;
     z-index: 10;
     background: none;
@@ -246,7 +277,7 @@ header .container a{
 }
 .nav-page{
     width: 0px;
-    height: 100vh;
+    height: 150vh;
     background: rgb(35, 35, 35);
     position: fixed;
     top: 0;
@@ -401,7 +432,7 @@ h1{
 }
 
 .services_counter{
-    width: 100%;
+    width: 92%;
     flex-direction: column;
     align-items: flex-start;
     background-color: rgb(35, 35, 35);
@@ -545,6 +576,9 @@ textarea{
 }
 .contact-form{
     background:#323232;
+    /* display: flex; */
+    /* justify-content: start; */
+    /* align-items: center; */
     padding: 5.5rem 3.125rem;
     border-radius: 10px;
     /* text-transform:capitalize; */
@@ -673,13 +707,21 @@ footer .container{
 }
 @media  screen and (max-width:450px) {
     .container{
+
         padding:1.5rem !important;
+        padding-top: 3.525rem !important;
         /* background: #000; */
     }
+}
+@media screen and (max-width:400px) {
+   .contact-form{
+    padding:4.5rem 2rem ;
+   }
 }
 @media  screen and (max-width:300px) {
     .container{
         padding:0.5rem !important;
+        padding-top: 3.525rem !important;
         /* background: #000; */
     }
 }
@@ -701,6 +743,7 @@ footer .container{
     .container{
         /* justify-items: center;    */
         padding: 3.625rem;
+        padding-top: 3.525rem !important;
     }
     .contact-section .container {
         grid-template-columns: 1fr;
@@ -713,6 +756,10 @@ footer .container{
         & .contact-section_address{
             width: 100%;
         }
+
+    }
+    #nav-btn{
+        display: flex;
     }
     .primary_button{
         align-self: center;

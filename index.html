@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  
+
   <header>
     <div class="nav-page">
       <a href="" class="nav_menu primary_color">home</a>
@@ -21,7 +21,7 @@
       <a href="" class="nav_menu">Contact</a>
     </div>
     <div class="container dis-flex" id="navbar">
-     
+
       <div class="logo">
         <h2>mr <span class="primary_color">ankit</span></h2>
       </div>
@@ -34,13 +34,11 @@
         </a>
         <a href="" class="nav_menu">Contact</a>
       </div>
-      <div class="nav-btn-menu">
-        <button  id="nav-btn" aria-label="Toggle Navbar">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+      <button id="nav-btn" aria-label="Toggle Navbar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
   <main>
@@ -52,7 +50,7 @@
         <p>This website is dedicated to showcasing my technical journey, knowledge, projects, and source code. Here,
           you’ll find insights into my learning experiences and the projects I've worked on, along with their source
           code. I aim to share my growth as a developer and inspire others in their own journeys. </p>
-        <button class="primary_button"><a href="">see my works</a></button>
+        <button class="primary_button no-drop"><a href="">see my works</a></button>
       </div>
       <div class="profile_picture" style="text-align: center;">
         <img src="./IMAGE/OIP.jpeg" alt="">
@@ -61,10 +59,10 @@
     <section class="media_section container two_column">
       <p>keep scrolling</p>
       <div class="media_section--media dis-flex">
-        <a href="">facebook</a>
-        <a href="">instagram</a>
+        <a href="" class="no-drop">facebook</a>
+        <a href="" class="no-drop">instagram</a>
         <a href="">linkedin</a>
-        <a href="">twitter</a>
+        <a href="" class="no-drop">twitter</a>
       </div>
     </section>
     <section class="about_section">
@@ -96,8 +94,8 @@
           <div class="service_section--list">
             <ul>
               <li>web development</li>
-              <!-- <li>ul/ux design</li>
-                <li>data analytics</li> -->
+              <li>ul/ux design</li>
+              <li>data analytics</li>
             </ul>
           </div>
         </div>
@@ -106,7 +104,7 @@
           <span class="lang primary_color">css</span>
           <span class="lang primary_color">javascript</span>
           <span class="lang primary_color">Java</span>
-          <!-- <span class="lang primary_color">springBoot</span> -->
+          <span class="lang primary_color">springBoot</span>
         </div>
       </div>
     </section>
@@ -120,7 +118,7 @@
         <h3>Clients</h3>
       </div>
     </section>
-    <!-- <section class="container"></section> -->
+    <section class="container"></section>
 
     <section style="position: relative;">
       <section class="contact-section">
@@ -143,8 +141,12 @@
               </div>
               <div>
                 <p class="title">Follow on</p>
-                <p class="description social-links"><a href="/#">Facebook</a><span>-</span><a target="_blank"
-                    href="#">Instagram</a><span>-</span><a target="_blank" href="#">Linkedin</a></p>
+                <p class="description social-links">
+                  <a class="no-drop" href="/#">Facebook</a><span>-</span>
+                  <a class="no-drop" target="_blank" href="#">Instagram</a>
+                  <span>-</span>
+                  <a target="_blank" href="#">Linkedin</a>
+                </p>
               </div>
             </div>
           </div>
@@ -169,7 +171,6 @@
                 <textarea name="description" id="" placeholder="Type your message"></textarea>
               </div>
               <div>
-                <!-- <img src="IMAGE/arrow.svg" alt=""> -->
                 <button class="dark-green-btn">Send message <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -212,18 +213,18 @@
     </section>
   </footer>
   <script>
-    const nav_page=document.querySelector(".nav-page");
-    const nav_btn=document.querySelector("#nav-btn")
-    nav_btn.addEventListener("click",()=>{
-      if(nav_btn.classList.contains("nav-btn-active")){
+    const nav_page = document.querySelector(".nav-page");
+    const nav_btn = document.querySelector("#nav-btn")
+    nav_btn.addEventListener("click", () => {
+      if (nav_btn.classList.contains("nav-btn-active")) {
         nav_btn.classList.remove("nav-btn-active");
-        nav_page.style.width="0%";
+        nav_page.style.width = "0%";
         document.body.classList.remove("no-scroll");
-      }else{
+      } else {
         console.log("df");
         nav_btn.classList.add("nav-btn-active");
         document.body.classList.add("no-scroll");
-        nav_page.style.width="100%";
+        nav_page.style.width = "100%";
       }
     });
   </script>
