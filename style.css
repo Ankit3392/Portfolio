@@ -360,7 +360,8 @@ h1{
     padding: 0.5rem;
     box-shadow: rgb(111, 61, 46) 0rem 0rem 0px 0.1rem;
     background-color: transparent;
-    border-radius: 9999px
+    border-radius: 9999px;
+    margin-top=1.5rem;
 }
 .service_section--services{
     margin-top:8rem;
