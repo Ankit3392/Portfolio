@@ -361,7 +361,7 @@ h1{
     box-shadow: rgb(111, 61, 46) 0rem 0rem 0px 0.1rem;
     background-color: transparent;
     border-radius: 9999px;
-    margin-top=1.5rem;
+/*     margin-top=1.5rem; */
 }
 .service_section--services{
     margin-top:8rem;
@@ -732,6 +732,9 @@ footer .container{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         /* grid-template-rows: repeat(2,1fr); */
+    }
+    .profile_section .profile_picture img{
+        margin-top:1.5rem;
     }
     .two_column .profile_info .primary_button{
         /* align-self: center; */
