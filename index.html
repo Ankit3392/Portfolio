@@ -9,16 +9,15 @@
 </head>
 
 <body>
-
   <header>
     <div class="nav-page">
-      <a href="" class="nav_menu primary_color">home</a>
-      <a href="#about_section" class="nav_menu">about</a>
-      <a href="#service_section" class="nav_menu">Services</a>
+      <a href="#home" class="nav_menu primary_color">home</a>
+      <a href="#about" class="nav_menu">about</a>
+      <a href="#services" class="nav_menu">Services</a>
       <a href="" class="nav_menu">Skills</a>
       <a href="" class="nav_menu">projects
       </a>
-      <a href="" class="nav_menu">Contact</a>
+      <a href="#contact" class="nav_menu">Contact</a>
     </div>
     <div class="container dis-flex" id="navbar">
 
@@ -26,13 +25,13 @@
         <h2>mrs. <span class="primary_color">ankit</span></h2>
       </div>
       <div class="nav dis-flex">
-        <a href="" class="nav_menu primary_color">home</a>
-        <a href="#about_section" class="nav_menu">about</a>
-        <a href="#service_section" class="nav_menu">Services</a>
-        <a href="" class="nav_menu">Skills</a>
-        <a href="" class="nav_menu">projects
+        <a href="#home" class="nav_menu primary_color">home</a>
+        <a href="#about" class="nav_menu">about</a>
+        <a href="#services" class="nav_menu">Services</a>
+        <a href="" class="nav_menu no-drop" >Skills</a>
+        <a href="" class="nav_menu no-drop">projects
         </a>
-        <a href="" class="nav_menu">Contact</a>
+        <a href="#contact" class="nav_menu">Contact</a>
       </div>
       <button id="nav-btn" aria-label="Toggle Navbar">
         <span></span>
@@ -41,8 +40,9 @@
       </button>
     </div>
   </header>
+  
   <main>
-    <section class="container profile_section two_column">
+    <section class="container profile_section two_column" id="home">
       <div class="profile_info dis-flex">
         <p class="sub_heading primary_color">hello and welcome</p>
         <h1>i am <span class="primary_color">ankit</span>,and I specialize in<span class="primary_color"> web
@@ -53,7 +53,7 @@
         <button class="primary_button no-drop"><a href="">see my works</a></button>
       </div>
       <div class="profile_picture" style="text-align: center;">
-        <img src="./IMAGE/OIP.jpeg" alt="">
+        <img src="./IMAGE/profile.jpg" alt="my pic">
       </div>
     </section>
     <section class="media_section container two_column">
@@ -65,8 +65,8 @@
         <a href="" class="no-drop">twitter</a>
       </div>
     </section>
-    <section class="about_section">
-      <div class="container">
+    <section class="about_section" >
+      <div class="container" id="about">
         <p class="sub_heading primary_color">about me</p>
         <div>
           <h2 class="about_me-heading" id="about_section">
@@ -76,13 +76,13 @@
           <p style="display: block;margin-top: 2rem;">Follow me on : linkedin, instagram, facebook ;</p>
         </div>
         <div class="with_two-section">
-          <img style="border-radius: 30%;position: relative;" src="./IMAGE/OIP.jpeg" alt="">
+          <img style="border-radius: 30%;position: relative;" src="./IMAGE/5.jpg" alt="">
         </div>
       </div>
 
     </section>
 
-    <section class="service_section" id="service_section">
+    <section class="service_section" id="services">
       <div class="container service_section--services">
         <div class="two_column">
           <div class="service_section--summary">
@@ -120,7 +120,7 @@
     </section>
     <section class="container"></section>
 
-    <section style="position: relative;">
+    <section style="position: relative;" id="contact">
       <section class="contact-section">
         <div class="container dis-grid two_column contact-section-container">
           <div class="contact_detail">
@@ -152,23 +152,23 @@
           </div>
           <div class="contact-form">
 
-            <form action="">
+            <form id="form" action="">
               <h2 class="form-title">Send a message</h2>
               <div>
                 <label for="name">your name</label>
-                <input type="text" placeholder="abc kumar">
+                <input type="text" name="name" placeholder="abc kumar" required>
               </div>
               <div>
                 <label for="mail">your Email</label>
-                <input type="email" name="mail" id="" placeholder="email@address.com">
+                <input type="email" name="mail" id="" placeholder="email@address.com" required>
               </div>
               <div>
                 <label for="subject">Subject</label>
-                <input type="text" name="" id="" placeholder="">
+                <input type="text" name="subject" id="" placeholder="" required>
               </div>
               <div>
                 <label for="description">description</label>
-                <textarea name="description" id="" placeholder="Type your message"></textarea>
+                <textarea name="message" id="" placeholder="Type your message" required></textarea>
               </div>
               <div>
                 <button class="dark-green-btn">Send message <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -186,6 +186,7 @@
     </section>
 
   </main>
+
   <footer>
     <section class="footer_border"></section>
     <section class="container dis-flex">
@@ -212,6 +213,7 @@
         </div> -->
     </section>
   </footer>
+
   <script>
     const nav_page = document.querySelector(".nav-page");
     const nav_btn = document.querySelector("#nav-btn")
@@ -221,11 +223,42 @@
         nav_page.style.width = "0%";
         document.body.classList.remove("no-scroll");
       } else {
-        console.log("df");
         nav_btn.classList.add("nav-btn-active");
         document.body.classList.add("no-scroll");
         nav_page.style.width = "100%";
       }
+    });
+   Array.from(nav_page.getElementsByTagName("a")).forEach(e => {
+    e.addEventListener("click",()=>{
+      nav_page.style.width="0%";
+      document.body.classList.remove("no-scroll");
+      nav_btn.classList.remove("nav-btn-active");
+    });
+   });
+     
+    document.getElementById("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+
+      for (let [key, value] of formData.entries()) {
+        console.log(`${key}: ${value}`);
+      }
+      // console.log(formData);
+      fetch("https://script.google.com/macros/s/AKfycbyX3-EZrYxdnHyHKiYdN98n1PgDYWT-9JM-59QJBGqPudJX6Hdd6-RFOb1tDrNWAv4b4Q/exec", { // 4. Send the data to Google Apps Script
+        method: "POST", // Send the data via POST method
+        body: formData // Send the form data in the body
+      })
+        .then(response => response.text()) // 5. Handle the response
+        .then(result => {
+          document.getElementById("status").textContent = result; // 6. Show success message
+          form.reset(); // 7. Clear the form after submission
+        })
+        .catch(error => {
+          console.error("Error!", error.message); // 8. Log any errors
+          document.getElementById("status").textContent = "Failed to send message."; // 9. Show error message
+        });
     });
   </script>
 </body>
