@@ -90,6 +90,7 @@ body{
 }
 .no-drop{
     cursor: no-drop;
+    pointer-events: none;
 }
 .primary_button{
     display: flex;
@@ -477,12 +478,12 @@ h1{
     left:2%;   
 }
 .services_counter--counting :nth-child(1)::after{
-    content: "10" !important;
+    content: "5+" !important;
     /* top: 10%;
     left:0.5%; */
 }
 .services_counter--counting :nth-child(2)::after{
-    content: "10" !important;
+    content: "0" !important;
 }
 .services_counter--counting :nth-child(3)::after{
     content: "0" !important;
@@ -512,7 +513,20 @@ h1{
     align-items: center;
     /* -webkit-box-pack: center;
     justify-content: center; */
-
+}
+.contact-form button img{
+    width: 32px;
+    height: 32px;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(180deg);
+    }
+}
+.rot{
+    animation: rotate 3s ease-in-out infinite;
 }
 .dark-green-btn{
     width:max-content ;
