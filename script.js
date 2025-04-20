@@ -1,3 +1,4 @@
+alert("maybe some link not work now , Because now some link is inactive for personal res");
 const nav_page = document.querySelector(".nav-page");
     const nav_btn = document.querySelector("#nav-btn")
     nav_btn.addEventListener("click", () => {
