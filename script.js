@@ -1,4 +1,4 @@
-alert("maybe some link not work now , Because now some link is inactive for personal res");
+alert("Some links may not be working right now, as they are currently inactive due to personal reasons.");
 const nav_page = document.querySelector(".nav-page");
     const nav_btn = document.querySelector("#nav-btn")
     nav_btn.addEventListener("click", () => {
